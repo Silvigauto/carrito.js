@@ -1,0 +1,20 @@
+[
+    { 
+	"img": "img/hamburguesa.jpg", 
+	"titulo": "Hamburguesa",
+    "descrip" : "Deliciosa hamburguesa vegana con queso cheddar y salsa especial DAVID'S" 
+	
+} ,
+{ 
+	"img": "img/sanguche.jpeg", 
+	"titulo": "Sanguche",
+    "descrip" : "Delicioso sanguche de milanesa de carne con lechuga y tomate"
+	
+},
+{ 
+	"img": "img/papas.jpg", 
+	"titulo": "Papas",
+    "descrip" : "Papas 100% hechas con nuestra huerta" 
+	
+} 
+]

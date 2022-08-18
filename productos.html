@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Davids</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg nav">
+        <div class="container-fluid d-flex flex-column align-items-center">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/David's.png" alt="Logo del restaurante" >
+          </a>
+          
+                 
+        </div>
+
+        
+    </nav>
+
+    <div class="d-flex justify-content-center nav">
+        <a href="index.html" class="link"><p class="p-3">Nosotros</p></a> 
+        <a href="productos.html" class="link"><P class="p-3">Realiza tu orden</P></a>
+    </div>
+
+    
+    <h1 class="text-center m-3">Realiza tu pedido</h1>
+
+    <main id="contendor-productos" class="d-flex flex-wrap justify-content-around ">
+
+    </main>
+
+    <div class="modal-contenedor m-4 ">
+        <div class="modal-carrito ">
+            <div class="d-flex justify-content-center">
+                <h3 class="text-center me-4">Mis pedidos</h3>
+            <button id="boton-carrito"> <span id="contadorCarrito"> 0</span> </button>
+            </div>
+            
+            <!-- <button id="carritoCerrar"> cerrar</button> -->
+            <div id="carrito-contenedor" class=" ">
+                <!-- <div class="productosEnCarrito">
+                    <p> Hamburguesa</p>
+                    <p> Precio: $800</p>
+                    <button class="boton-eliminar"> Eliminar</button>
+
+                </div> -->
+
+            </div>
+            <p class="precioProducto"> Precio total : $ <span id="precioTotal">0  </span> </p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
+
+    </div>
+
+    
+    <script src="js/productos.js"> </script> 
+    <script src="js/index.js"></script> 
+    
+     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
