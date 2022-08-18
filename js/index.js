@@ -1,5 +1,6 @@
 const contenedorProductos = document.getElementById('contendor-productos')
 
+
 const contenedorCarrito = document.getElementById('carrito-contenedor')
 
 const botonVaciar = document.getElementById('vaciar-carrito')
@@ -10,6 +11,8 @@ const precioTotal = document.getElementById('precioTotal')
 
 let carrito = [];
 
+// Local Storage
+
 document.addEventListener('DOMContentLoaded' , () => {
     if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
@@ -17,6 +20,34 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
 } )
 
+platos.forEach((producto) => {
+    const div = document.createElement('div')
+    div.classList.add('producto')
+    div.innerHTML = `
+                    <img src=${producto.img} alt="" class="img-card">
+                    <h3 class= "titulo-card">${producto.nombre}</h3>
+                    <p class="precioProducto"> $ ${producto.precio} </p>
+                    <button id= "agregar${producto.id}" class = "boton-agregar "> Agregar </button>
+
+    `
+    contenedorProductos.appendChild(div)
+    const boton = document.getElementById(`agregar${producto.id}`)
+
+    boton.addEventListener('click', () => {
+        agregarAlCarrito(producto.id)
+        Toastify({
+            text: `Has agregado: ${producto.nombre}`,
+            duration: 1000,
+            gravity: 'top',
+            position: 'right',
+            style: {
+             background: 'rgb(218, 103, 27, 0.9)'
+         }
+    
+        }).showToast();
+    })
+    
+})
 
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
@@ -36,34 +67,7 @@ botonVaciar.addEventListener('click', () => {
 })
 
 
-platos.forEach((producto) => {
-    const div = document.createElement('div')
-    div.classList.add('producto')
-    div.innerHTML = `
-                    <img src=${producto.img} alt="" class="img-card">
-                    <h3>${producto.nombre}</h3>
-                    <p class="precioProducto">Precio : $ ${producto.precio} </p>
-                    <button id= "agregar${producto.id}" class = "boton-agregar"> Agregar </button>
 
-    `
-    contenedorProductos.appendChild(div)
-    const boton = document.getElementById(`agregar${producto.id}`)
-
-    boton.addEventListener('click', () => {
-        agregarAlCarrito(producto.id)
-        Toastify({
-            text: "Se agregó al carrito",
-            duration: 1000,
-            gravity: 'top',
-            position: 'right',
-            style: {
-             background: 'rgb(218, 103, 27, 0.7)'
-         }
-    
-        }).showToast();
-    })
-    
-})
 
 const agregarAlCarrito = (prodId) => {
     const existe = carrito.some (prod => prod.id === prodId) 
@@ -107,10 +111,11 @@ const actualizarCarrito = () => {
         const div = document.createElement('div')
         div.className = ('productoEnCarrito')
         div.innerHTML = `
+        <img src="${prod.img}" alt="" class= "img-prod">
         <p>${prod.nombre} </p>
         <p> Precio : ${prod.precio} </p>
         <p> Cantidad : <span id="cantidad">${prod.cantidad} </span> </p>
-        <button onclick = "eliminarDelCarrito(${prod.id})" class= "boton-eliminar"> Eliminar</button>
+        <button onclick = "eliminarDelCarrito(${prod.id})" class= "boton-eliminar"> <i class="fa-solid fa-trash"></i></button>
         
         
         ` 

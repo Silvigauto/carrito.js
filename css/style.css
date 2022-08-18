@@ -1,6 +1,94 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Oswald:wght@200&display=swap');
 
+/* Sobre nosotros html */
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.nav {
+    background-color: #EB9B33;
+}
+
+
+.link {
+    text-decoration: none;
+    color: #5c3100;
+    font-size: 1.3em;
+    
+}
+
+.link:hover {
+    color: #3d0a03;
+}
+
+
+.fachada {
+    height: 400px;
+    width: 400px;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.sobreN {
+    font-size: 1.3em;
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+
+}
+.platos {
+    background-color: #ffb24e;
+}
+
+.boton-pedir {
+    background-color: orange;
+}
+
+footer {
+    background-color: #c4320d;
+    padding: 30px;
+}
+
+
+/* Carrito de compras JS */
+
+.producto {
+    font-family: 'Oswald', sans-serif;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+    background-color: rgba(250, 177, 18, 0.712);
+    border-radius: 5px;
+    
+}
+
+
+.boton-agregar {
+    background-color: rgb(26, 95, 13);
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    padding: 7px;
+}
+
+.boton-agregar:hover {
+    color: black;
+}
+
+
+.titulo-card {
+    padding-top: 5px;
+}
+
 .productoEnCarrito {
     display: flex;
     flex-direction: row;
@@ -8,15 +96,7 @@
     padding-bottom: 10px;
 }
 
-.producto {
-    
-    padding: 10px;
-    margin: 10px;
-    margin-bottom: 20px;
-    box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
-    background-color: rgba(250, 177, 18, 0.712);
-    border-radius: 5px;
-}
+
 
 .img-card {
     border-radius: 5px;
@@ -32,51 +112,19 @@
 .boton-eliminar {
     background-color: rgb(226, 12, 12);
     border: none;
+    border-radius: 5px;
     color: white;
 }
 
-.logo {
-    width: 100px;
-    height: 100px;
-}
-
-.nav {
-    background-color: #EB9B33;
-}
 
 
-.link {
-    text-decoration: none;
-    color: #5c3100;
+
+.img-prod {
+    height: 50px;
+    width: 65px;
+    border-radius: 15px;
 }
 
-.fachada {
-    height: 400px;
-    width: 400px;
-}
-
-h1 {
-    font-family: 'Oswald', sans-serif;
-}
-.sobreN {
-    font-size: 1.3em;
-    font-family: 'Nunito Sans', sans-serif;
-    
-}
-
-h2 {
-    font-family: 'Oswald', sans-serif;
-
-}
-.platos {
-    background-color: #ffb24e;
-}
-
-.btn-pedido {
-    background-color: blue;
-}
-
-footer {
-    background-color: #c4320d;
-    padding: 30px;
+#vaciar-carrito {
+    background-color: black;
 }
