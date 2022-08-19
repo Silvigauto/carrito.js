@@ -62,12 +62,14 @@ footer {
 
 .producto {
     font-family: 'Oswald', sans-serif;
-    padding: 10px;
+    
     margin: 10px;
     margin-bottom: 20px;
-    box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
-    background-color: rgba(250, 177, 18, 0.712);
+    box-shadow: 6px 4px 9px 0px rgba(201,201,201,0.6);
+    
     border-radius: 5px;
+    border-style: solid;
+    border-width: 0.1px;
     
 }
 
@@ -92,15 +94,13 @@ footer {
 .productoEnCarrito {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-bottom: 10px;
 }
 
 
 
-.img-card {
-    border-radius: 5px;
-}
+
 
 #boton-carrito {
     border-radius: 3px;
